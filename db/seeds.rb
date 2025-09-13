@@ -7,9 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-<<<<<<< HEAD
-=======
-
 
 # Organizations
 tesla = Organization.create!(name: "Tesla Inc.", email: "investor@tesla.com")
@@ -59,4 +56,4 @@ EmailTemplate.create!(
 )
 
 puts "Seeded: Organizations #{Organization.count}, Contacts #{Contact.count}, Portfolios #{Portfolio.count}, Templates #{EmailTemplate.count}"
->>>>>>> f006700 (Initial clean commit)
+

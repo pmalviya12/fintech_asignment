@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+
+>>>>>>> f006700 (Initial clean commit)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,4 +15,21 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+<<<<<<< HEAD
+=======
+
+  resources :contacts, only: [:index] do
+    member do
+      get  :preview_email 
+      post :send_email
+    end
+  end
+
+  # Email templates dashboard
+  resources :email_templates do
+    member do
+      get :preview
+    end
+  end
+>>>>>>> f006700 (Initial clean commit)
 end

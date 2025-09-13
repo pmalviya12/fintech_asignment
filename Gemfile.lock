@@ -341,10 +341,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
-<<<<<<< HEAD
-=======
   pg
->>>>>>> f006700 (Initial clean commit)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2, >= 8.0.2.1)

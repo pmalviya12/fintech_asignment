@@ -1,24 +1,16 @@
 # README
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+# 1. Clone the repo
+git clone (https://github.com/pmalviya12/fintech_asignment)
+cd FinTech
 
-* Ruby version
+# 2. Install Gem
+bundle install
 
-* System dependencies
+# 3. Set up database
+rails db:create db:migrate db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 4. Start Server
+rails server

@@ -14,3 +14,11 @@ rails db:create db:migrate db:seed
 
 # 4. Start Server
 rails server
+-----------------------------------------------------------------------
+
+Feedback changes:
+
+Removed sqlite3 gem from the project.
+Added pg gem in the Gemfile.
+Updated config/database.yml to use PostgreSQL for all environments.
+Verified via Rails console

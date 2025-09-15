@@ -1,0 +1,29 @@
+<h1>Contacts Dashboard</h1>
+
+<% @contacts.each do |contact| %>
+  <hr>
+  <p><%= contact.name %> (<%= contact.email %>) — Org: <%= contact.organization&.name %></p>
+
+  <ul>
+    <% contact.portfolios.each do |p| %>
+      <li><%= p.name %> — Balance: <%= p.balance %> Perf: <%= p.performance %>%</li>
+    <% end %>
+  </ul>
+
+  <p>
+    Best: <%= contact.best_portfolio&.performance || "N/A" %>%  
+    Worst: <%= contact.worst_portfolio&.performance || "N/A" %>%
+  </p>
+
+  <!-- Preview form -->
+  <%= form_with url: preview_email_contact_path(contact), method: :get, local: true do %>
+    <%= select_tag :template_id, options_from_collection_for_select(@templates, :id, :subject) %>
+    <%= submit_tag "Preview" %>
+  <% end %>
+
+  <!-- Send form -->
+  <%= form_with url: send_email_contact_path(contact), method: :post, local: true do %>
+    <%= select_tag :template_id, options_from_collection_for_select(@templates, :id, :subject) %>
+    <%= submit_tag "Send" %>
+  <% end %>
+<% end %>

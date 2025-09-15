@@ -1,0 +1,12 @@
+<%= form_with model: @template, local: true do |f| %>
+  <p>Subject:</p>
+  <%= f.text_field :subject %>
+
+  <p>Body:</p>
+  <%= f.text_area :body, rows: 10 %>
+
+  <p>
+    <%= f.submit "Save" %>
+    <%= link_to "Cancel", email_templates_path %>
+  </p>
+<% end %>
